@@ -1,0 +1,20 @@
+{
+  "name": "Craigslist Filter",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Filter your craigslist results like you never could before!",
+  "browser_action": {
+    "default_icon": "craigslist_icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [ "tabs", "storage",
+    "https://*/*","http://*/*"
+  ],
+  "background":
+    {"scripts": ["background.js"]},
+  "content_scripts": [{
+    "matches": ["http://craigslist.org/*", "http://*.craigslist.org/*"],
+    "js": ["jquery-1.9.1.min.js", "craigslist_filter.js"],
+    "run_at": "document_start"
+  }]
+}
