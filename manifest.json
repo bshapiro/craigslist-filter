@@ -4,17 +4,17 @@
   "manifest_version": 2,
   "description": "Filter your craigslist results like you never could before!",
   "browser_action": {
-    "default_icon": "craigslist_icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "img/icon.png",
+    "default_popup": "html/popup.html"
   },
   "permissions": [ "tabs", "storage",
     "https://*/*","http://*/*"
   ],
   "background":
-    {"scripts": ["background.js"]},
+    {"scripts": ["js/background.js"]},
   "content_scripts": [{
     "matches": ["http://craigslist.org/*", "http://*.craigslist.org/*"],
-    "js": ["jquery-1.9.1.min.js", "craigslist_filter.js"],
+    "js": ["js/jquery-1.9.1.min.js", "js/craigslist_filter.js"],
     "run_at": "document_start"
   }]
 }
