@@ -1,6 +1,6 @@
 {
   "name": "Craigslist Filter",
-  "version": "1.1",
+  "version": "1.12",
   "manifest_version": 2,
   "description": "Filter your craigslist results like never before!",
   "browser_action": {
