@@ -24,11 +24,19 @@ function filter(terms, case_sensitive) {
             for (var i = 0; i < terms.length; i++) {
                 var rows = $("a:icontains('" + terms[i] + "')").parent().parent();
                 rows.css('display', 'none');
+                var location_rows = jQuery('.pnr');
+                location_rows.map(function () {
+                    if ($(this).text().toUpperCase().indexOf(terms[i].toUpperCase())>=0) {
+                        $(this).parent().parent().css('display', 'none');
+                    }
+                });
             }
         } else {
             for (var j = 0; j < terms.length; j++) {
                 var rows = $("a:contains('" + terms[j] + "')").parent().parent();
+                var location_rows = $(".pnr:contains('" + terms[i] + "')").parent().parent();
                 rows.css('display', 'none');
+                location_rows.css('display', 'none');
             }
         }
     }

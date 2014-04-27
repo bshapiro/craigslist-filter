@@ -1,8 +1,8 @@
 {
   "name": "Craigslist Filter",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
-  "description": "Filter your craigslist results like you never could before!",
+  "description": "Filter your craigslist results like never before!",
   "browser_action": {
     "default_icon": "img/icon.png",
     "default_popup": "html/popup.html"
